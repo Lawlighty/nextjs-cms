@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "layouts",
+  "info": {
+    "singularName": "layout",
+    "pluralName": "layouts",
+    "displayName": "layout",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "qr_code": {
+      "type": "string"
+    },
+    "qr_code_image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "copy_right": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "site_number": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "public_number": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "link_lists": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::linklist.linklist"
+    }
+  }
+}
